@@ -7,14 +7,9 @@
 from airflow import DAG
 from datetime import datetime
 from airflow.operators.python import PythonOperator, BranchPythonOperator
-import pyspark
 import boto3
 import pandas as pd
 from io import StringIO 
-from pyspark.sql import SparkSession
-from pyspark.sql.types import StructType,StructField, StringType, IntegerType 
-from pyspark.sql.types import ArrayType, DoubleType, BooleanType
-from pyspark.sql.functions import col,array_contains
 
 def municipios_estados():
 
